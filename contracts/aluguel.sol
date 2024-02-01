@@ -47,7 +47,7 @@ contract Aluguel {
     {
         if (percentualReajuste > 20) {
             percentualReajuste = 20;
-        }
+     }
         uint256 valorDoAcrescimo = 0;
         valorDoAcrescimo = ((valor*percentualReajuste)/100);
         valor = valor + valorDoAcrescimo;
