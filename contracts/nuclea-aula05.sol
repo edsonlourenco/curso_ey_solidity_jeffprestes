@@ -11,6 +11,8 @@ Endereço do contrato na rede Sepolia (dados de todo o processo):
 
 No PNG aluguel_sol_deploy.png estão os dados printados da execução.
 
+https://sepolia.etherscan.io/tx/0xbc7c66d4d83016aa6c3c3818c8c67cfe9966196785b16cb79735f30223947f56
+
 */
 pragma solidity >=0.7.0 <0.9.0;
 
