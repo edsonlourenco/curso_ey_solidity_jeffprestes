@@ -1,0 +1,571 @@
+{
+	"id": "4559c8d91eb22b87d83061cd0ff718a1",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.24",
+	"solcLongVersion": "0.8.24+commit.e11b9ed9",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"atividade_07_02_2024/Titulo.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\n\npragma solidity >=0.7.0 <0.9.0;\n\n/**\n * @title Titulo\n * @dev Define funcoes de um titulo\n * @author Jeff Prestes\n */\ninterface Titulo {\n\n    /**\n     * @dev Retorna o valor nominal.\n     */\n    function valorNominal() external view returns (uint256);\n\n    /**\n     * @dev Retorna o nome do Emissor.\n     */\n    function nomeEmissor() external view returns (string memory);\n\n    /**\n     * @dev Retorna a data da emissao.\n     */\n    function dataEmissao() external view returns (uint256);\n\n    /**\n     * @dev Emitido quando um novo prazo de pagamento é definido\n     */\n    event NovoPrazoPagamento(uint256 prazoAntigo, uint256 prazoNovo);\n\n    function detalhesDoTitulo() external view returns ( Titulo contrato );\n\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"atividade_07_02_2024/Titulo.sol": {
+				"Titulo": {
+					"abi": [
+						{
+							"anonymous": false,
+							"inputs": [
+								{
+									"indexed": false,
+									"internalType": "uint256",
+									"name": "prazoAntigo",
+									"type": "uint256"
+								},
+								{
+									"indexed": false,
+									"internalType": "uint256",
+									"name": "prazoNovo",
+									"type": "uint256"
+								}
+							],
+							"name": "NovoPrazoPagamento",
+							"type": "event"
+						},
+						{
+							"inputs": [],
+							"name": "dataEmissao",
+							"outputs": [
+								{
+									"internalType": "uint256",
+									"name": "",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "detalhesDoTitulo",
+							"outputs": [
+								{
+									"internalType": "contract Titulo",
+									"name": "contrato",
+									"type": "address"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "nomeEmissor",
+							"outputs": [
+								{
+									"internalType": "string",
+									"name": "",
+									"type": "string"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "valorNominal",
+							"outputs": [
+								{
+									"internalType": "uint256",
+									"name": "",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "Jeff Prestes",
+						"details": "Define funcoes de um titulo",
+						"events": {
+							"NovoPrazoPagamento(uint256,uint256)": {
+								"details": "Emitido quando um novo prazo de pagamento é definido"
+							}
+						},
+						"kind": "dev",
+						"methods": {
+							"dataEmissao()": {
+								"details": "Retorna a data da emissao."
+							},
+							"nomeEmissor()": {
+								"details": "Retorna o nome do Emissor."
+							},
+							"valorNominal()": {
+								"details": "Retorna o valor nominal."
+							}
+						},
+						"title": "Titulo",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"dataEmissao()": "51f48cbb",
+							"detalhesDoTitulo()": "4efeabbf",
+							"nomeEmissor()": "fa36ed8c",
+							"valorNominal()": "36e69b22"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.24+commit.e11b9ed9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"prazoAntigo\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"prazoNovo\",\"type\":\"uint256\"}],\"name\":\"NovoPrazoPagamento\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"dataEmissao\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"detalhesDoTitulo\",\"outputs\":[{\"internalType\":\"contract Titulo\",\"name\":\"contrato\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nomeEmissor\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"valorNominal\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Jeff Prestes\",\"details\":\"Define funcoes de um titulo\",\"events\":{\"NovoPrazoPagamento(uint256,uint256)\":{\"details\":\"Emitido quando um novo prazo de pagamento \\u00e9 definido\"}},\"kind\":\"dev\",\"methods\":{\"dataEmissao()\":{\"details\":\"Retorna a data da emissao.\"},\"nomeEmissor()\":{\"details\":\"Retorna o nome do Emissor.\"},\"valorNominal()\":{\"details\":\"Retorna o valor nominal.\"}},\"title\":\"Titulo\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"atividade_07_02_2024/Titulo.sol\":\"Titulo\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"atividade_07_02_2024/Titulo.sol\":{\"keccak256\":\"0x7180b9559b4eaafa474fd27a9f92e4637278f544692b50d7b8a7065c4f464864\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://2d4da1c5b5625d83429e9657a9aaf55ec14c348bf7ec398b8fd9dacef5809c2c\",\"dweb:/ipfs/QmSxyhyWe1mP13oUHAW3uuSsM2fnnmf6X8pFoobtmwsrax\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"atividade_07_02_2024/Titulo.sol": {
+				"ast": {
+					"absolutePath": "atividade_07_02_2024/Titulo.sol",
+					"exportedSymbols": {
+						"Titulo": [
+							34
+						]
+					},
+					"id": 35,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "Titulo",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "70:84:0",
+								"text": " @title Titulo\n @dev Define funcoes de um titulo\n @author Jeff Prestes"
+							},
+							"fullyImplemented": false,
+							"id": 34,
+							"linearizedBaseContracts": [
+								34
+							],
+							"name": "Titulo",
+							"nameLocation": "165:6:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "179:48:0",
+										"text": " @dev Retorna o valor nominal."
+									},
+									"functionSelector": "36e69b22",
+									"id": 8,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "valorNominal",
+									"nameLocation": "241:12:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "253:2:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "279:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "279:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "278:9:0"
+									},
+									"scope": 34,
+									"src": "232:56:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 9,
+										"nodeType": "StructuredDocumentation",
+										"src": "294:50:0",
+										"text": " @dev Retorna o nome do Emissor."
+									},
+									"functionSelector": "fa36ed8c",
+									"id": 14,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "nomeEmissor",
+									"nameLocation": "358:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 10,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "369:2:0"
+									},
+									"returnParameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 12,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "395:13:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_memory_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 11,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "395:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "394:15:0"
+									},
+									"scope": 34,
+									"src": "349:61:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 15,
+										"nodeType": "StructuredDocumentation",
+										"src": "416:50:0",
+										"text": " @dev Retorna a data da emissao."
+									},
+									"functionSelector": "51f48cbb",
+									"id": 20,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "dataEmissao",
+									"nameLocation": "480:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 16,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "491:2:0"
+									},
+									"returnParameters": {
+										"id": 19,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 18,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 20,
+												"src": "517:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 17,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "517:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "516:9:0"
+									},
+									"scope": 34,
+									"src": "471:55:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"anonymous": false,
+									"documentation": {
+										"id": 21,
+										"nodeType": "StructuredDocumentation",
+										"src": "532:77:0",
+										"text": " @dev Emitido quando um novo prazo de pagamento é definido"
+									},
+									"eventSelector": "17ca6475bfb6360f560590b7b98486285bf9dfa961b50d865ab171166e08f991",
+									"id": 27,
+									"name": "NovoPrazoPagamento",
+									"nameLocation": "620:18:0",
+									"nodeType": "EventDefinition",
+									"parameters": {
+										"id": 26,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 23,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "prazoAntigo",
+												"nameLocation": "647:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 27,
+												"src": "639:19:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 22,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "639:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 25,
+												"indexed": false,
+												"mutability": "mutable",
+												"name": "prazoNovo",
+												"nameLocation": "668:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 27,
+												"src": "660:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 24,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "660:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "638:40:0"
+									},
+									"src": "614:65:0"
+								},
+								{
+									"functionSelector": "4efeabbf",
+									"id": 33,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "detalhesDoTitulo",
+									"nameLocation": "694:16:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 28,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "710:2:0"
+									},
+									"returnParameters": {
+										"id": 32,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 31,
+												"mutability": "mutable",
+												"name": "contrato",
+												"nameLocation": "744:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 33,
+												"src": "737:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_contract$_Titulo_$34",
+													"typeString": "contract Titulo"
+												},
+												"typeName": {
+													"id": 30,
+													"nodeType": "UserDefinedTypeName",
+													"pathNode": {
+														"id": 29,
+														"name": "Titulo",
+														"nameLocations": [
+															"737:6:0"
+														],
+														"nodeType": "IdentifierPath",
+														"referencedDeclaration": 34,
+														"src": "737:6:0"
+													},
+													"referencedDeclaration": 34,
+													"src": "737:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_contract$_Titulo_$34",
+														"typeString": "contract Titulo"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "735:19:0"
+									},
+									"scope": 34,
+									"src": "685:70:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 35,
+							"src": "155:603:0",
+							"usedErrors": [],
+							"usedEvents": [
+								27
+							]
+						}
+					],
+					"src": "37:721:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,252 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerSet",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "titulo",
+						"type": "address"
+					}
+				],
+				"name": "adicionaTitulo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "detalheTitulo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "contract Titulo",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "enderecoTitulo",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "quantidadeTitulos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "visitas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Jeff Prestes",
+			"details": "Armazena e controla a custodia de varios titulos do owner",
+			"kind": "dev",
+			"methods": {
+				"adicionaTitulo(address)": {
+					"details": "Adiciona um titulo a custodia",
+					"params": {
+						"titulo": "endereco do titulo a ser adicionado"
+					}
+				},
+				"changeOwner(address)": {
+					"details": "Change owner",
+					"params": {
+						"newOwner": "address of new owner"
+					}
+				},
+				"detalheTitulo(uint256)": {
+					"details": "Retorna dados de um titulo na custodia",
+					"params": {
+						"index": "posicao do titulo na custodia"
+					},
+					"returns": {
+						"_0": "valorNominal, nomeEmissor, dataEmissao"
+					}
+				},
+				"enderecoTitulo(uint256)": {
+					"details": "Retorna o endereco de um titulo na custodia",
+					"params": {
+						"index": "posicao do titulo na custodia"
+					}
+				},
+				"getOwner()": {
+					"details": "Return owner address ",
+					"returns": {
+						"_0": "address of owner"
+					}
+				},
+				"quantidadeTitulos()": {
+					"details": "Retorna a quantidade de titulos na custodia"
+				}
+			},
+			"title": "Custodia",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"atividade_07_02_2024/Custodia.sol": "Custodia"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"atividade_07_02_2024/Custodia.sol": {
+			"keccak256": "0x9c562b43aee7afdee6bff90450796ee33d4a808b09de2b072ff27574536112ef",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://1e2edcb439100ac39fba9675b6d39c77ea1c29eb8525097c535368c266882087",
+				"dweb:/ipfs/QmWnPJXWrhPcgNxsqJHpLpx1cpHAbrqidDdC4twAmcbQmU"
+			]
+		},
+		"atividade_07_02_2024/Titulo.sol": {
+			"keccak256": "0x7180b9559b4eaafa474fd27a9f92e4637278f544692b50d7b8a7065c4f464864",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2d4da1c5b5625d83429e9657a9aaf55ec14c348bf7ec398b8fd9dacef5809c2c",
+				"dweb:/ipfs/QmSxyhyWe1mP13oUHAW3uuSsM2fnnmf6X8pFoobtmwsrax"
+			]
+		},
+		"atividade_07_02_2024/owner.sol": {
+			"keccak256": "0x886f9a41864b58f66fc1436f528f529cffed49a13680f3876a802de024a041c1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://cede2fd9f11e35e26eb4ca2594d84dd1d2f74dfeee81f08456d993a6adcc379f",
+				"dweb:/ipfs/QmaoUeVMfT4Cb8iFagWtLMEktg294ao4M9tcvkXyYcbRzE"
+			]
+		}
+	},
+	"version": 1
+}

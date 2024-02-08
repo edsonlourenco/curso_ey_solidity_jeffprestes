@@ -3,13 +3,9 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 import "./owner.sol";
-import "./titulo.sol";
+import "./Titulo.sol";
 
-/**
- * @title Recebivel
- * @dev Recebivel
- * @author Felipph Calado
- */
+
  contract Recebivel is Titulo, Owner {
    
     string _estabelecimentoComercial;
@@ -35,21 +31,21 @@ import "./titulo.sol";
     
 
     /**
-     * @dev Retorna o nome da Credenciadora emissora desse recebível.
+     * @dev Retorna o nome da Credenciadora que emitiu o recebível.
      */
     function nomeEmissor() external view returns (string memory) {
         return _credenciadora;
     }
 
     /**
-     * @dev Retorna o arranjo do recebivel.
+     * @dev Retorna o arranjo.
      */
     function arranjo() external view returns (string memory) {
         return _arranjo;
     }
 
     /**
-     * @dev Retorna o valor nominal.
+     * @dev Retorna o valor.
      */
     function valorNominal() external view returns (uint256) {
         return _valor;
@@ -63,13 +59,13 @@ import "./titulo.sol";
     }
 
     /**
-     * @dev Retorna a data prevista de Liquidacao
+     * @dev Retorna a data de previsõa da liquidacao
      */
     function dataPrevistaDeLiquidacao() external view returns (uint256) {
         return _dataPrevistaDeLiquidacao;
     }
     function detalhesDoTitulo() external view returns ( Titulo contrato ) {
-        return this;
+        return this; //não fazer desse jeito ajustar depois
     }
 
  }

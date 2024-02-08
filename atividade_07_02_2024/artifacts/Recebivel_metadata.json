@@ -1,0 +1,268 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoAntigo",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "prazoNovo",
+						"type": "uint256"
+					}
+				],
+				"name": "NovoPrazoPagamento",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerSet",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "arranjo",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "dataEmissao",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "dataPrevistaDeLiquidacao",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "detalhesDoTitulo",
+				"outputs": [
+					{
+						"internalType": "contract Titulo",
+						"name": "contrato",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nomeEmissor",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "valorNominal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "visitas",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"NovoPrazoPagamento(uint256,uint256)": {
+					"details": "Emitido quando um novo prazo de pagamento é definido"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"arranjo()": {
+					"details": "Retorna o arranjo do recebivel."
+				},
+				"changeOwner(address)": {
+					"details": "Change owner",
+					"params": {
+						"newOwner": "address of new owner"
+					}
+				},
+				"dataEmissao()": {
+					"details": "Retorna a data da emissao."
+				},
+				"dataPrevistaDeLiquidacao()": {
+					"details": "Retorna a data prevista de Liquidacao"
+				},
+				"getOwner()": {
+					"details": "Return owner address ",
+					"returns": {
+						"_0": "address of owner"
+					}
+				},
+				"nomeEmissor()": {
+					"details": "Retorna o nome da Credenciadora emissora desse recebível."
+				},
+				"valorNominal()": {
+					"details": "Retorna o valor nominal."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"atividade_07_02_2024/Recebivel.sol": "Recebivel"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"atividade_07_02_2024/Recebivel.sol": {
+			"keccak256": "0x20a109b12e6e2e708679d42e84b8e01ee1d41db3675ef42c0b7e639bd4a80344",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d24ee4d9bab7b9108a0bafe8cec4e7a9b13ec1bb4ab6b6084d01e4288f9aac30",
+				"dweb:/ipfs/QmZpYxyMowWBNEcMLQDAnafYRKhoHKkJWrdgbAQqaSHdrU"
+			]
+		},
+		"atividade_07_02_2024/Titulo.sol": {
+			"keccak256": "0x7180b9559b4eaafa474fd27a9f92e4637278f544692b50d7b8a7065c4f464864",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2d4da1c5b5625d83429e9657a9aaf55ec14c348bf7ec398b8fd9dacef5809c2c",
+				"dweb:/ipfs/QmSxyhyWe1mP13oUHAW3uuSsM2fnnmf6X8pFoobtmwsrax"
+			]
+		},
+		"atividade_07_02_2024/owner.sol": {
+			"keccak256": "0x886f9a41864b58f66fc1436f528f529cffed49a13680f3876a802de024a041c1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://cede2fd9f11e35e26eb4ca2594d84dd1d2f74dfeee81f08456d993a6adcc379f",
+				"dweb:/ipfs/QmaoUeVMfT4Cb8iFagWtLMEktg294ao4M9tcvkXyYcbRzE"
+			]
+		}
+	},
+	"version": 1
+}

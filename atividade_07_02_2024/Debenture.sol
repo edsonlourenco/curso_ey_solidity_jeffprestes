@@ -3,13 +3,8 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 import "./owner.sol";
-import "./titulo.sol";
+import "./Titulo.sol";
 
-/**
- * @title Debenture
- * @dev Operacoes de uma debenture
- * @author Jeff Prestes
- */
  contract Debenture is Titulo, Owner {
 
     string _emissor;
@@ -32,32 +27,22 @@ import "./titulo.sol";
         emit NovoPrazoPagamento(_dataEmissao, _prazoPagamento);
     }
 
-    /**
-     * @dev Retorna o valor nominal.
-     */
+ 
     function valorNominal() external view returns (uint256) {
         return _valor;
     }
 
-    /**
-     * @dev Retorna o nome do Emissor.
-     */
+   
     function nomeEmissor() external view returns (string memory) {
         return _emissor;
     }
 
-    /**
-     * @dev Retorna a data da emissao.
-     */
+   
     function dataEmissao() external view returns (uint256) {
         return _dataEmissao;
     }
 
-    /**
-    * @dev muda o rating
-    * @notice dependendo da situacao economica a empresa avaliadora pode mudar o rating
-    * @param novoRating novo rating da debenture
-    */
+
     function mudaRating(string memory novoRating) external onlyOwner returns (bool) {
         rating = novoRating;
         return true;
@@ -69,10 +54,6 @@ import "./titulo.sol";
         return true;
     }
 
-    /**
-    * @dev retorna o valor da variavel fracoes
-    * @notice informa o numero de fracoes da debenture
-    */
     function fracoes() external view returns (uint16) {
         return _fracoes;
     }
